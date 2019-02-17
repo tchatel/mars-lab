@@ -1,3 +1,5 @@
 <h2>Les rovers martiens</h2>
 
-<app-rover-list></app-rover-list>
+<app-rover-list (select)="selectedRover = $event"></app-rover-list>
+
+<app-rover-details [rover]="selectedRover"></app-rover-details>

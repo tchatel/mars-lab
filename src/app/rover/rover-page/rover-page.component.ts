@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {RoverApiService} from '../../core/services/rover-api.service';
+import {Rover} from '../../model/model';
 
 @Component({
   selector: 'app-rover-page',
@@ -7,6 +7,8 @@ import {RoverApiService} from '../../core/services/rover-api.service';
   styleUrls: ['./rover-page.component.css']
 })
 export class RoverPageComponent implements OnInit {
+
+  selectedRover: Rover;
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {RoverApiService} from '../../core/services/rover-api.service';
 import {Rover} from '../../model/model';
 import {Observable} from 'rxjs';
@@ -10,6 +10,8 @@ import {Observable} from 'rxjs';
 })
 export class RoverListComponent implements OnInit {
 
+  @Output() select = new EventEmitter<Rover>();
+
   roverList$: Observable<Rover[]>;
   selectedRover: Rover;
 
@@ -17,6 +19,11 @@ export class RoverListComponent implements OnInit {
 
   ngOnInit() {
     this.roverList$ = this.roverApi.list();
+  }
+
+  selectRover(rover: Rover): void {
+    this.selectedRover = rover;
+    this.select.emit(rover);
   }
 
 }
