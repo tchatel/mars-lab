@@ -1,5 +1,6 @@
 <app-rover-item *ngFor="let rover of roverList$ | async"
                 [rover]="rover"
+                [selected]="selectedRover === rover"
                 (select)="selectedRover = rover">
 </app-rover-item>
 

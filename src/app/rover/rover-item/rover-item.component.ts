@@ -9,6 +9,7 @@ import {Rover} from '../../model/model';
 export class RoverItemComponent implements OnInit {
 
   @Input() rover: Rover;
+  @Input() selected: boolean;
   @Output() select = new EventEmitter<Rover>();
 
   constructor() { }
