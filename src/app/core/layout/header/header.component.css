@@ -1,0 +1,25 @@
+.header {
+  display: block;
+}
+
+nav {
+  display: inline-block;
+}
+
+nav a {
+  margin: 10px;
+  padding: 3px;
+  text-decoration: none;
+  border-bottom: 2px solid grey;
+  color: papayawhip;
+}
+
+nav a.active {
+  border-bottom: 2px solid #500;
+  color: #c22;
+}
+
+h1 {
+  display: inline-block;
+  margin-left: 5em;
+}

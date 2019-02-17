@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {RoverModule} from './rover/rover.module';
+import {LayoutModule} from './core/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {RoverModule} from './rover/rover.module';
   imports: [
     BrowserModule,
     RoverModule,
+    LayoutModule,
     // Routing module à la fin :
     AppRoutingModule
   ],
