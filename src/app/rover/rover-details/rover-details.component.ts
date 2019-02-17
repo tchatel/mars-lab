@@ -15,4 +15,10 @@ export class RoverDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  getCameraList(): string {
+    return this.rover.cameras
+      .map(camera => `${camera.name} = ${camera.full_name}`)
+      .join(', ');
+  }
+
 }
