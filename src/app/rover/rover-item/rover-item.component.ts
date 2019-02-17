@@ -15,4 +15,8 @@ export class RoverItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  isRoverDead(): boolean {
+    return this.rover.status !== 'active';
+  }
+
 }
