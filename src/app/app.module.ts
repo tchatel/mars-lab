@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import {RoverModule} from './rover/rover.module';
 import {LayoutModule} from './core/layout/layout.module';
 import {HttpClientModule} from '@angular/common/http';
+import {PhotoModule} from './photo/photo.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     RoverModule,
+    PhotoModule,
     LayoutModule,
     HttpClientModule,
     // Routing module à la fin :
