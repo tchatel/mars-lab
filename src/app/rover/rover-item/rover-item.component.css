@@ -15,7 +15,7 @@
   border: 1px solid #522;
   border-radius: 3px;
 }
-.item .photo img{
+.item .photo img {
   max-width: 200px;
   max-height: 200px;
 }
@@ -24,3 +24,6 @@
   font-size: 1.1em;
 }
 
+.item.dead .photo img {
+  opacity: 0.5;
+}
