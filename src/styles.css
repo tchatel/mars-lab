@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.2em;
+}
+h3 {
+  font-size: 1.1em;
+  font-weight: normal;
+}
