@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {RoverModule} from './rover/rover.module';
 import {LayoutModule} from './core/layout/layout.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {LayoutModule} from './core/layout/layout.module';
     BrowserModule,
     RoverModule,
     LayoutModule,
+    HttpClientModule,
     // Routing module à la fin :
     AppRoutingModule
   ],
