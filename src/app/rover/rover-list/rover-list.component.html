@@ -4,4 +4,4 @@
                 (select)="selectedRover = rover">
 </app-rover-item>
 
-<pre>{{selectedRover |json}}</pre>
+<app-rover-details [rover]="selectedRover"></app-rover-details>

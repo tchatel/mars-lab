@@ -1,0 +1,16 @@
+
+.details {
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+.details p {
+  font-size: 0.9em;
+  color: #a88;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.details .description {
+  font-size: 0.9em;
+}
