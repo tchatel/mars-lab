@@ -27,3 +27,8 @@
 .item.dead .photo img {
   opacity: 0.5;
 }
+
+.item.selected .photo {
+  border: 2px solid red;
+  border-radius: 3px;
+}
