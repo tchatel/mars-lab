@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {RoverApiService} from '../../core/services/rover-api.service';
-import {Observable} from 'rxjs';
-import {Rover} from '../../model/model';
 
 @Component({
   selector: 'app-rover-list',
@@ -10,12 +8,9 @@ import {Rover} from '../../model/model';
 })
 export class RoverListComponent implements OnInit {
 
-  roverList$: Observable<Rover[]>;
-
-  constructor(private roverApi: RoverApiService) { }
+  constructor(roverApi: RoverApiService) { }
 
   ngOnInit() {
-    this.roverList$ = this.roverApi.list();
   }
 
 }
