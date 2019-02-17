@@ -11,6 +11,7 @@ import {Observable} from 'rxjs';
 export class RoverListComponent implements OnInit {
 
   roverList$: Observable<Rover[]>;
+  selectedRover: Rover;
 
   constructor(private roverApi: RoverApiService) { }
 

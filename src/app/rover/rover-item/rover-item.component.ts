@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Rover} from '../../model/model';
 
 @Component({
@@ -9,6 +9,7 @@ import {Rover} from '../../model/model';
 export class RoverItemComponent implements OnInit {
 
   @Input() rover: Rover;
+  @Output() select = new EventEmitter<Rover>();
 
   constructor() { }
 

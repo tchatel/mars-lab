@@ -5,6 +5,7 @@
   padding: 10px;
   margin: 5px;
   text-align: center;
+  cursor: pointer;
 }
 .item .photo {
   display: table-cell;

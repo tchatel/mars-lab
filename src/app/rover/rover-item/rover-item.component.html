@@ -1,4 +1,5 @@
-<div class="item" [class.dead]="isRoverDead()">
+<div class="item" [class.dead]="isRoverDead()"
+     (click)="select.emit(rover)">
   <div class="photo">
     <img [src]="rover.img_src">
   </div>
