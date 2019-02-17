@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RoverApiService} from '../../core/services/rover-api.service';
 
 @Component({
   selector: 'app-rover-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoverListComponent implements OnInit {
 
-  constructor() { }
+  constructor(roverApi: RoverApiService) { }
 
   ngOnInit() {
   }

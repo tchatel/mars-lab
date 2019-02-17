@@ -8,7 +8,7 @@ import {RoverApiService} from '../../core/services/rover-api.service';
 })
 export class RoverPageComponent implements OnInit {
 
-  constructor(roverApi: RoverApiService) { }
+  constructor() { }
 
   ngOnInit() {
   }
