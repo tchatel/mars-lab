@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {RoverApiService} from '../../core/services/rover-api.service';
 
 @Component({
   selector: 'app-rover-page',
