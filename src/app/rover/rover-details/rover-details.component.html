@@ -6,7 +6,11 @@
   <p>Statut : HS</p>
   <p>Max sol : 2208</p>
 
-  <p>Caméras : FHAZ = Front Hazard Avoidance Camera, NAVCAM = Navigation Camera...</p>
+  <p>Caméras :
+    <span *ngFor="let camera of rover.cameras ; last as isLast">
+      {{camera.name}} = {{camera.full_name}}<span *ngIf="!isLast">,</span>
+    </span>
+  </p>
 
   <div class="description">Spirit, alias MER-A (Mars Exploration Rover – A), est un rover envoyé sur Mars par la NASA en 2003...</div>
 </div>
