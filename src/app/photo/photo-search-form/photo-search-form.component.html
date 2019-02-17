@@ -1,9 +1,13 @@
 <form>
 
   Rover :
-  <select>
-    <option></option>
-    <option>Curiosity</option>
+  <select name="rover"
+          [(ngModel)]="formData.rover">
+    <option [ngValue]="undefined"></option>
+    <option *ngFor="let rover of roverList$ |async"
+            [ngValue]="rover">
+      {{rover.name}}
+    </option>
   </select>
 
   Caméra :
