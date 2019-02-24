@@ -1,6 +1,6 @@
 <div class="item">
   <div class="photo">
-    <a [href]="photo.img_src">
+    <a [routerLink]="['/photo', photo.id]">
       <img [src]="photo.img_src">
     </a>
   </div>

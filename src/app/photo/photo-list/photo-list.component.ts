@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Photo} from '../../model/model';
+import {ResultService} from '../result.service';
 
 @Component({
   selector: 'app-photo-list',
@@ -8,9 +9,7 @@ import {Photo} from '../../model/model';
 })
 export class PhotoListComponent implements OnInit {
 
-  @Input() photoList: Photo[];
-
-  constructor() { }
+  constructor(public result: ResultService) { }
 
   ngOnInit() {
   }

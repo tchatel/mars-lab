@@ -23,4 +23,8 @@ export class PhotoApiService {
     return this.http.get<Photo[]>(url);
   }
 
+  get(id: string): Observable<Photo> {
+    const url = `http://localhost:3390/photos/${id}`;
+    return this.http.get<Photo>(url);
+  }
 }

@@ -7,9 +7,10 @@ import { PhotoSearchFormComponent } from './photo-search-form/photo-search-form.
 import {FormsModule} from '@angular/forms';
 import { PhotoListComponent } from './photo-list/photo-list.component';
 import { PhotoItemComponent } from './photo-item/photo-item.component';
+import { BigPhotoComponent } from './big-photo/big-photo.component';
 
 @NgModule({
-  declarations: [PhotoPageComponent, PhotoSearchFormComponent, PhotoListComponent, PhotoItemComponent],
+  declarations: [PhotoPageComponent, PhotoSearchFormComponent, PhotoListComponent, PhotoItemComponent, BigPhotoComponent],
   imports: [
     CommonModule,
     FormsModule,
