@@ -10,7 +10,7 @@ import {RoverApiService} from '../../core/services/rover-api.service';
 })
 export class PhotoSearchFormComponent implements OnInit {
 
-  formData: {rover?: Rover, camera?: Camera, sol?: number} = {};
+  formData: SearchData = {};
   roverList$: Observable<Rover[]>;
 
   constructor(private roverApi: RoverApiService) { }
@@ -19,4 +19,10 @@ export class PhotoSearchFormComponent implements OnInit {
     this.roverList$ = this.roverApi.list();
   }
 
+}
+
+export interface SearchData {
+  rover?: Rover;
+  camera?: Camera;
+  sol?: number;
 }
