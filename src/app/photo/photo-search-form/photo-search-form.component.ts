@@ -8,11 +8,17 @@ import {Camera, Rover} from '../../model/model';
 })
 export class PhotoSearchFormComponent implements OnInit {
 
-  formData: {rover?: Rover, camera?: Camera, sol?: number} = {};
+  formData: SearchData = {};
 
   constructor() { }
 
   ngOnInit() {
   }
 
+}
+
+export interface SearchData {
+  rover?: Rover;
+  camera?: Camera;
+  sol?: number;
 }
