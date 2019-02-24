@@ -1,4 +1,5 @@
-<form #formInfo="ngForm">
+<form #formInfo="ngForm"
+      (ngSubmit)="search.emit(formData)">
 
   Rover :
   <select name="rover" required
@@ -32,4 +33,3 @@
         *ngIf="roverInfo.hasError('required')">Veuillez choisir un rover.</span>
 </form>
 
-<pre>{{formData |json}}</pre>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Camera, Rover} from '../../model/model';
 import {Observable} from 'rxjs';
 import {RoverApiService} from '../../core/services/rover-api.service';
@@ -9,6 +9,8 @@ import {RoverApiService} from '../../core/services/rover-api.service';
   styleUrls: ['./photo-search-form.component.css']
 })
 export class PhotoSearchFormComponent implements OnInit {
+
+  @Output() search = new EventEmitter<SearchData>();
 
   formData: SearchData = {};
   roverList$: Observable<Rover[]>;
