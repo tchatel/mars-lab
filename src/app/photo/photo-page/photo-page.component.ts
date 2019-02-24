@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {SearchData} from '../photo-search-form/photo-search-form.component';
+import {PhotoApiService} from '../../core/services/photo-api.service';
+import {Observable} from 'rxjs';
+import {Photo} from '../../model/model';
 
 @Component({
   selector: 'app-photo-page',
@@ -8,12 +11,18 @@ import {SearchData} from '../photo-search-form/photo-search-form.component';
 })
 export class PhotoPageComponent implements OnInit {
 
-  constructor() { }
+  photoList$: Observable<Photo[]>;
+
+  constructor(private photoApi: PhotoApiService) { }
 
   ngOnInit() {
   }
 
   doSearch(searchData: SearchData) {
-    console.log(searchData);
+    this.photoList$ = this.photoApi.search(
+      searchData.rover.name,
+      searchData.camera && searchData.camera.name,
+      searchData.sol
+    );
   }
 }
