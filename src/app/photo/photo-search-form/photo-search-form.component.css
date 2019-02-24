@@ -8,3 +8,8 @@ form {
 form button {
   margin-left: 20px;
 }
+
+.error {
+  color: red;
+  margin-left: 10px;
+}

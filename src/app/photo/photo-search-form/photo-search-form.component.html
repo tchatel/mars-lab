@@ -3,7 +3,8 @@
   Rover :
   <select name="rover" required
           [(ngModel)]="formData.rover"
-          (ngModelChange)="formData.camera = undefined">
+          (ngModelChange)="formData.camera = undefined"
+          #roverInfo="ngModel">
     <option [ngValue]="undefined"></option>
     <option *ngFor="let rover of roverList$ |async"
             [ngValue]="rover">
@@ -26,6 +27,9 @@
          [(ngModel)]="formData.sol">
 
   <button [disabled]="formInfo.invalid">Rechercher</button>
+
+  <span class="error"
+        *ngIf="roverInfo.hasError('required')">Veuillez choisir un rover.</span>
 </form>
 
 <pre>{{formData |json}}</pre>
