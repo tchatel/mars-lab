@@ -2,7 +2,8 @@
 
   Rover :
   <select name="rover"
-          [(ngModel)]="formData.rover">
+          [(ngModel)]="formData.rover"
+          (ngModelChange)="formData.camera = undefined">
     <option [ngValue]="undefined"></option>
     <option *ngFor="let rover of roverList$ |async"
             [ngValue]="rover">
@@ -11,9 +12,13 @@
   </select>
 
   Caméra :
-  <select>
-    <option></option>
-    <option>MAST</option>
+  <select name="camera"
+          [(ngModel)]="formData.camera">
+    <option [ngValue]="undefined"></option>
+    <option *ngFor="let camera of formData.rover?.cameras"
+            [ngValue]="camera">
+      {{camera.name}}
+    </option>
   </select>
 
   Sol :
