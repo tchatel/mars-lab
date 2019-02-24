@@ -1,7 +1,7 @@
-<form>
+<form #formInfo="ngForm">
 
   Rover :
-  <select name="rover"
+  <select name="rover" required
           [(ngModel)]="formData.rover"
           (ngModelChange)="formData.camera = undefined">
     <option [ngValue]="undefined"></option>
@@ -25,7 +25,7 @@
   <input type="number" name="sol"
          [(ngModel)]="formData.sol">
 
-  <button>Rechercher</button>
+  <button [disabled]="formInfo.invalid">Rechercher</button>
 </form>
 
 <pre>{{formData |json}}</pre>
