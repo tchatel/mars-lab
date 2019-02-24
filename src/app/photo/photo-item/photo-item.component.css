@@ -1,0 +1,27 @@
+.item {
+  display: inline-block;
+  width: 210px;
+  height: 245px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.item .photo {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #522;
+  border-radius: 3px;
+}
+.item .photo img{
+  max-width: 200px;
+  max-height: 200px;
+}
+.item .label {
+  padding: 3px;
+  font-size: 0.7em;
+  color: grey;
+}
+

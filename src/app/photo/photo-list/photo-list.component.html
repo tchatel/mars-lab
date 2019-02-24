@@ -1,0 +1,8 @@
+<ng-container *ngIf="photoList">
+
+  <p>Résultats : {{photoList.length}}</p>
+
+  <app-photo-item *ngFor="let photo of photoList"
+                  [photo]="photo"></app-photo-item>
+
+</ng-container>

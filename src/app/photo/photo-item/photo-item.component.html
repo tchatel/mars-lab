@@ -1,0 +1,12 @@
+<div class="item">
+  <div class="photo">
+    <a [href]="photo.img_src">
+      <img [src]="photo.img_src">
+    </a>
+  </div>
+  <div class="label">
+    {{photo.rover.name}} /
+    {{photo.camera.name}} /
+    sol:{{photo.sol}} /
+    id:{{photo.id}}</div>
+</div>
