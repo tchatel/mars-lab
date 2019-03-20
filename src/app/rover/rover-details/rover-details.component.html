@@ -4,7 +4,7 @@
   <p>Date de lancement : {{rover.launch_date |date:'dd/MM/yyyy'}}</p>
   <p>Date d'atterrissage sur Mars : {{rover.landing_date |date:'dd/MM/yyyy'}}</p>
   <p>Statut : {{rover.status |status}}</p>
-  <p>Max sol : 2208</p>
+  <p>Max sol : {{rover.max_sol}}</p>
 
   <p>Caméras :
     <span *ngFor="let camera of rover.cameras ; last as isLast">
